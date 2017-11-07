@@ -23,17 +23,9 @@ $(function(){
 		$('#title').html('标题变一变');
 	});
 
-	// 测试 StringBuilder 类的测试
-	$('#testSB').click(function(){
-		
-		// 指定 && 为分隔符
-		var sb = new StringBuilder(',');
-		sb.Append('jarod');
-		sb.Append('zhao');
+	// 测试用 jquery 的 click 方法执行页面里单独的方法
+	$('#testSB').click(test);
 
-		// console.info(sb.Length());
-		console.info(sb.ToString());
-	});
 
 	$("#Count").click(function(){
 
@@ -140,4 +132,18 @@ getRandSum = function(){
 	}
 	// console.info('hel');
 	return ref;
+}
+
+// 测试 StringBuilder 使用方法
+test = function(){
+	// 指定 , 为分隔符
+	var sb = new StringBuilder(',');
+	sb.Append('jarod');
+	sb.Append('zhao');
+
+	// console.info(sb.Length());
+	console.info(sb.ToString());
+
+	//方法联动
+	$('#testSB').css('color','red');
 }

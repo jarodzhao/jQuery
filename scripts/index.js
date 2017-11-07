@@ -1,22 +1,33 @@
 $(function(){
 	//alert('hello, jarod!');
 	$(".level1 > a").click(function(){
-		$(this).addClass("current")		//给当前元素添加 current 样式
-		.next().show()					//下一个元素显示
+
+		//给当前元素添加 current 样式
+		$(this).addClass("current")
+
+		//下一个元素显示
+		.next().show()
+
+		//父元素的同辈元素的子元素<a>移除 current 样式
 		.parent().siblings().children("a").removeClass("current")
-										//父元素的同辈元素的子元素<a>移除 current 样式
-		.next().hide();					//它们的下一个元素隐藏
+
+		//它们的下一个元素隐藏
+		.next().hide();			
+
 		return false;
 	});
 
 	$('#title').css("color","red");
+
 	$('#title').click(function(){
 		$('#title').html('标题变一变');
 	});
 
 	$("#Count").click(function(){
+
 		var arrays = new Array();
 		var items = document.getElementsByName("check");
+		
 		for (var i = 0; i < items.length; i++) 
 			if(items[i].checked)
 				arrays.push(items[i].value);
@@ -30,6 +41,7 @@ $(function(){
 	var item = document.getElementById("tb");
 	var tbody = item.getElementsByTagName("tbody")[0];
 	var trs = tbody.getElementsByTagName("tr");
+
 	for(var i = 0; i < trs.length; i++)
 		if(i % 2 == 0)
 			trs[i].style.backgroundColor='#efefef';

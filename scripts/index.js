@@ -140,6 +140,7 @@ test = function(){
 	var sb = new StringBuilder(',');
 	sb.Append('jarod');
 	sb.Append('zhao');
+	sb.AppendFormat('{0}','is a good man.');
 
 	// console.info(sb.Length());
 	console.info(sb.ToString());

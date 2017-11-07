@@ -2,7 +2,7 @@ body,a,input,button {
 	font-size: 12px;
 	color: blue;
 }
-#tb {
+#tb,#catagory {
 	width: 500px;
 	text-align: center;
 }

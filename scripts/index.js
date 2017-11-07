@@ -54,16 +54,20 @@ $(function(){
 
 	var row = 3;
 	var col = Math.ceil(catagory.length / row);
+
+	var count = 0;
 	var $catagory = $('#catagory');
 
 	for (var i = 0; i < col; i++) {
-		var tr = '<tr>';
-		$catagory.append(tr);
-		for (var i2 = 0; i2 < row; i2++) {
-			var td = '<td>' + catagory[i2] + '</td>';
-			$catagory.append(td);
+		$catagory.append('<tr>');
+		for (var j = 0; j < row; j++) {
+			if(catagory[count].length > 0)
+				item = catagory[count];
+			count++;
+			$catagory.append('<td>' + item + '</td>');
+			if(count == catagory.length) return;
 		}
-		$catagory.append('</tr>');
+		//为什么第一行会输出 <tr></tr>
+		$catagory.append('</tr>')
 	}
-
 });

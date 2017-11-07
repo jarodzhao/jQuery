@@ -27,7 +27,7 @@ $(function(){
 
 		var arrays = new Array();
 		var items = document.getElementsByName("check");
-		
+
 		for (var i = 0; i < items.length; i++) 
 			if(items[i].checked)
 				arrays.push(items[i].value);
@@ -100,6 +100,13 @@ $(function(){
 			// 生成1000以为的随机数
 			sum = Math.random() * 1000;
 
+			if(sum < 900) 
+				sum = getRandSum();
+
+			// console.info('sum = ' + sum + ' | ' + (sum < 900));
+
+			if(sum < 900) getRandSum();
+
 			// 表格单元格
 			$catagory.append('<td>' + item + '(' + Math.floor(sum) + ')' + '</td>');
 
@@ -110,3 +117,15 @@ $(function(){
 		$catagory.append('</tr>')
 	}
 });
+
+// 单独定义的一个方法
+// 获取一个大于900小于1000的随机整数
+getRandSum = function(){
+	var ref = 0;
+	while(ref < 900){
+		ref = Math.random() * 1000;
+		// console.info('ref');
+	}
+	// console.info('hel');
+	return ref;
+}

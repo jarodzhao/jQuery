@@ -52,22 +52,49 @@ $(function(){
 		'理光','奥林巴斯','明基',
 		'爱国者','其他品牌'];	//14
 
-	var row = 3;
+	// 随机数
+	var sum = 0;
+
+	// 列数
+	var row = 4;
+
+	// 根据列数计算出行数
 	var col = Math.ceil(catagory.length / row);
 
+	// 循环计数器
 	var count = 0;
+
+	// 获取表格对象
 	var $catagory = $('#catagory');
 
+	// 设置表格 border 属性
+	$catagory.attr('border','1');
+
+	// 行循环开始
 	for (var i = 0; i < col; i++) {
+
+		// 增加行首 tr 标记
 		$catagory.append('<tr>');
+
+		// 列循环开始
 		for (var j = 0; j < row; j++) {
+
+			// 如果品牌列表中的元素不为空值
 			if(catagory[count].length > 0)
 				item = catagory[count];
+
 			count++;
-			$catagory.append('<td>' + item + '</td>');
+
+			// 生成1000以为的随机数
+			sum = Math.random() * 1000;
+
+			// 表格单元格
+			$catagory.append('<td>' + item + '(' + Math.floor(sum) + ')' + '</td>');
+
+			// 循环次数达到品牌列表的总数，跳出循环
 			if(count == catagory.length) return;
 		}
-		//为什么第一行会输出 <tr></tr>
+		//为什么第一行会输出 <tr></tr>，显示效果正常
 		$catagory.append('</tr>')
 	}
 });

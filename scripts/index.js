@@ -23,6 +23,18 @@ $(function(){
 		$('#title').html('标题变一变');
 	});
 
+	// 测试 StringBuilder 类的测试
+	$('#testSB').click(function(){
+		
+		// 指定 && 为分隔符
+		var sb = new StringBuilder(',');
+		sb.Append('jarod');
+		sb.Append('zhao');
+
+		// console.info(sb.Length());
+		console.info(sb.ToString());
+	});
+
 	$("#Count").click(function(){
 
 		var arrays = new Array();
@@ -100,7 +112,7 @@ $(function(){
 			// 生成1000以为的随机数
 			sum = Math.random() * 1000;
 
-			if(sum < 900) 
+			if(sum < 500) 
 				sum = getRandSum();
 
 			// console.info('sum = ' + sum + ' | ' + (sum < 900));
@@ -122,7 +134,7 @@ $(function(){
 // 获取一个大于900小于1000的随机整数
 getRandSum = function(){
 	var ref = 0;
-	while(ref < 900){
+	while(ref < 500){
 		ref = Math.random() * 1000;
 		// console.info('ref');
 	}

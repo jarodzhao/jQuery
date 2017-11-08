@@ -26,7 +26,6 @@ $(function(){
 	// 测试用 jquery 的 click 方法执行页面里单独的方法
 	$('#testSB').click(test);
 
-
 	$("#Count").click(function(){
 
 		var arrays = new Array();

@@ -28,12 +28,9 @@ $(function(){
 	// 测试用 jquery 的 click 方法执行页面里单独的方法
 	$('#testSB').click(test);
 
-<<<<<<< HEAD
-=======
 	//显示全部按钮方法绑定
 	$('#btnShowAll').click(showAll);
 
->>>>>>> 2f62eb22e50b8d311b005e44c4b953ae48bda9da
 	$("#Count").click(function(){
 
 		var arrays = new Array();

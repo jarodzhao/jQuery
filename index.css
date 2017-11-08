@@ -6,3 +6,14 @@ body,a,input,button {
 	width: 500px;
 	text-align: center;
 }
+.promoted {
+	color: red;
+}
+.more{
+	border: 0px solid #ccc;
+	height: 30px;
+	width: 500px;
+	background: #fff;
+	text-align: center;
+	line-height: 30px;
+}

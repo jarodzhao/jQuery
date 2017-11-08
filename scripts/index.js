@@ -17,7 +17,9 @@ $(function(){
 		return false;
 	});
 
-	$('#title').css("color","red");
+	// css 选择器为什么不能用? style.color 是 html dom 属性,而非 jquery 属性或者方法
+	// $('#title').style.color='red';
+	document.getElementById('title').style.color='red';
 
 	$('#title').click(function(){
 		$('#title').html('标题变一变');
@@ -26,6 +28,12 @@ $(function(){
 	// 测试用 jquery 的 click 方法执行页面里单独的方法
 	$('#testSB').click(test);
 
+<<<<<<< HEAD
+=======
+	//显示全部按钮方法绑定
+	$('#btnShowAll').click(showAll);
+
+>>>>>>> 2f62eb22e50b8d311b005e44c4b953ae48bda9da
 	$("#Count").click(function(){
 
 		var arrays = new Array();
@@ -47,25 +55,21 @@ $(function(){
 
 	for(var i = 0; i < trs.length; i++)
 		if(i % 2 == 0)
-			trs[i].style.backgroundColor='#efefef';
+			trs[i].style.backgroundColor='#ffffff';
 
 	// jQuery 方式一句搞定
-	$("#tb tr:even").css("background","#eef");
+	$("#tb tr:odd").css("background","#efefef");
 
 	// jQuery 的 class 选择器，以及 css 属性设置
-	$('.level1:even').css('background','#ccf');
-
-	// 产生随机数
-	// var s = Math.random() * 10000;
-	// console.info(Math.floor(s));
+	$('.level1:even').css('background','#eef');
 
 	// 数码品牌列表
 	var catagory = [
-		'佳能','索尼','三星',
-		'尼康','松下','卡西欧',
-		'富士','柯达','宾得',	
-		'理光','奥林巴斯','明基',
-		'爱国者','其他品牌'];	//14
+	'佳能','索尼','三星',
+	'尼康','松下','卡西欧',
+	'富士','柯达','宾得',	
+	'理光','奥林巴斯','明基',
+	'爱国者','其他品牌'];	//14
 
 	// 随机数
 	var sum = 0;
@@ -95,20 +99,11 @@ $(function(){
 		for (var j = 0; j < row; j++) {
 
 			// 如果品牌列表中的元素不为空值
-			if(catagory[count].length > 0)
+			if(catagory[count])
 				item = catagory[count];
 
 			count++;
-
-			// 生成1000以为的随机数
-			sum = Math.random() * 1000;
-
-			if(sum < 500) 
-				sum = getRandSum();
-
-			// console.info('sum = ' + sum + ' | ' + (sum < 900));
-
-			if(sum < 900) getRandSum();
+			sum = getRandSum(1000,35000);
 
 			// 表格单元格
 			$catagory.append('<td>' + item + '(' + Math.floor(sum) + ')' + '</td>');
@@ -117,32 +112,45 @@ $(function(){
 			if(count == catagory.length) return;
 		}
 		//为什么第一行会输出 <tr></tr>，显示效果正常
-		$catagory.append('</tr>')
+		$catagory.append('</tr>');
 	}
+
+	//为什么这里的 按钮事件 不执行!?
+	// $('#btnShowAll').click(showAll);
 });
+
+// 显示全部品牌方法
+showAll = function(){
+	var $catagory = $('#catagory');
+	//获取表格内的所有 td
+	$('#catagory td:even').css('color','red');
+}
 
 // 单独定义的一个方法
 // 获取一个大于900小于1000的随机整数
-getRandSum = function(){
+getRandSum = function(min, max){
 	var ref = 0;
-	while(ref < 500){
-		ref = Math.random() * 1000;
-		// console.info('ref');
+	while(ref < min){
+		ref = Math.random() * max;
+		// console.info('ref = ' + ref);
 	}
-	// console.info('hel');
 	return ref;
 }
 
-// 测试 StringBuilder 使用方法
+// 测试 StringBuilder 使用方法(调用:click(test))
 test = function(){
+
+	var ss = ['aa', 'bb'];
+
 	// 指定 , 为分隔符
 	var sb = new StringBuilder(',');
 	sb.Append('jarod');
 	sb.Append('zhao');
+	sb.AppendFormat('{1},{0}',ss);
 
 	// console.info(sb.Length());
 	console.info(sb.ToString());
 
 	//方法联动
-	$('#testSB').css('color','red');
+	$('#testSB').addClass('promoted');
 }

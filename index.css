@@ -17,3 +17,25 @@ body,a,input,button {
 	text-align: center;
 	line-height: 30px;
 }
+.box{
+	width: 200px;
+	background: #efefef;
+	text-align: center;
+}
+.menu{
+	/*margin: 0px;*/
+	padding: 0px;
+}
+.level1{
+	line-height: 30px;
+	text-align: center;
+	list-style-type: none;
+	background: #eeeeff;
+}
+.level2{
+	margin: 0px;
+	padding: 0px;
+	background: #fff;
+	line-height: 20px;
+	list-style-type: none;
+}

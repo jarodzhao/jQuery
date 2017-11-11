@@ -1,18 +1,28 @@
 $(function(){
-	//alert('hello, jarod!');
+
+	//给列表设置样式
+	// $('ul li').addClass('li-no-style');
+
+	//列表默认关闭状态
+	$(".level1 > a").next().hide();
+
+	//菜单的点击事件
 	$(".level1 > a").click(function(){
+
+		// 已打开的时候，点击后关闭
+		if($(this).hasClass('current')){
+			$(this).removeClass('current').next().hide();
+			return false;
+		}
 
 		//给当前元素添加 current 样式
 		$(this).addClass("current")
-
 		//下一个元素显示
 		.next().show()
-
 		//父元素的同辈元素的子元素<a>移除 current 样式
 		.parent().siblings().children("a").removeClass("current")
-
 		//它们的下一个元素隐藏
-		.next().hide();			
+		.next().hide();		
 
 		return false;
 	});
@@ -26,7 +36,9 @@ $(function(){
 	});
 
 	// 测试用 jquery 的 click 方法执行页面里单独的方法
-	$('#testSB').click(test);
+	$('#testSB').click(testStringBuilder);
+
+	$('#toggle').click(testToggle);
 
 	//显示全部按钮方法绑定
 	$('#btnShowAll').click(showAll);
@@ -52,13 +64,14 @@ $(function(){
 
 	for(var i = 0; i < trs.length; i++)
 		if(i % 2 == 0)
-			trs[i].style.backgroundColor='#ffffff';
+			// trs[i].style.backgroundColor='#ffffff';
 
 	// jQuery 方式一句搞定
 	$("#tb tr:odd").css("background","#efefef");
 
 	// jQuery 的 class 选择器，以及 css 属性设置
-	$('.level1:even').css('background','#eef');
+	// $('.level1:even').css('background','#eef');
+	// $('.level1').css('background','#fff');
 
 	// 数码品牌列表
 	var catagory = [

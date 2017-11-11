@@ -22,7 +22,7 @@ getRandSum = function(min, max){
 // 测试 StringBuilder 使用方法
 // (调用:click(test))
 //********************************
-test = function(){
+testStringBuilder = function(){
 	var ss = ['aa', 'bb'];
 	// 指定 , 为分隔符
 	var sb = new StringBuilder(',');
@@ -32,4 +32,16 @@ test = function(){
 	console.info(sb.ToString());
 	//方法联动
 	$('#testSB').addClass('promoted');
+}
+
+//********************************
+// 测试 Toggle() 方法
+//********************************
+testToggle = function(){
+	$checkbox = $('input');	// console.info($checkbox);
+	for (var i = 0; i < $checkbox.length; i++) {
+		var cb = $checkbox[i];
+		console.info(cb.checked);
+	}
+	
 }

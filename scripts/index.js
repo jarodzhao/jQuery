@@ -17,7 +17,7 @@ $(function(){
 		return false;
 	});
 
-	// css 选择器为什么不能用? style.color 是 html dom 属性,而非 jquery 属性或者方法
+	// css 选择器为什么不能用? 
 	// $('#title').style.color='red';
 	document.getElementById('title').style.color='red';
 

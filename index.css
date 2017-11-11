@@ -23,12 +23,13 @@ body,a,input,button {
 	text-align: center;
 }
 .menu{
-	/*margin: 0px;*/
+	height: 35px;
+	margin: 0px;
 	padding: 0px;
 }
 .level1{
+	border: 1px solid #ccccff;
 	line-height: 30px;
-	text-align: center;
 	list-style-type: none;
 	background: #eeeeff;
 }

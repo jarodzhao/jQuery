@@ -8,23 +8,15 @@ $(function(){
 
 	//菜单的点击事件
 	$(".level1 > a").click(function(){
-
-		// 已打开的时候，点击后关闭
+		// 打开/关闭菜单子项
 		if($(this).hasClass('current')){
 			$(this).removeClass('current').next().hide();
 			return false;
+		}else{
+			$(this).addClass("current")
+			.next().show();	
+			return false;
 		}
-
-		//给当前元素添加 current 样式
-		$(this).addClass("current")
-		//下一个元素显示
-		.next().show()
-		//父元素的同辈元素的子元素<a>移除 current 样式
-		.parent().siblings().children("a").removeClass("current")
-		//它们的下一个元素隐藏
-		.next().hide();		
-
-		return false;
 	});
 
 	// css 选择器为什么不能用? 

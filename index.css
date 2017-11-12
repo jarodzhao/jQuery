@@ -48,3 +48,13 @@ a:hover {
 	line-height: 20px;
 	list-style-type: none;
 }
+.content {
+	width: 500px;
+	border: 1px solid #ccf;
+	background: #fff;
+}
+.head {
+	width: 500px;
+	border: 1px solid #ccf;
+	background: #eef;
+}

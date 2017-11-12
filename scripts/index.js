@@ -1,25 +1,34 @@
 $(function() {
 
-	$('.level1')
-	.mouseover(function(){
-		$(this).css('color','#f00');
-	}).click(function(){
-		if(!$(this).hasClass('open'))
-			$(this).addClass('open').children('.level2').show();
-		else
-			$(this).removeClass('open').children('.level2').hide();
-	}).mouseout(function(){
-		$(this).css('color','#00f');
+	// $('.content').hide();
+	//绑定一个单击事件
+	$('#panel h5.head').click(function(){
+		$(this).next().toggle();
+	}, function(){
+		$(this).next().toggle();
 	});
+
+	//打开页面时列表默认关闭状态
+	$(".level1").children().hide();
+
+	$('.level1')
+		.mouseover(function() {
+			$(this).css('color', '#f00');
+			// showTooltip(this);
+		}).click(function() {
+			if (!$(this).hasClass('open'))
+				$(this).addClass('open').children('.level2').show();
+			else
+				$(this).removeClass('open').children('.level2').hide();
+		}).mouseout(function() {
+			$(this).css('color', '#00f');
+			//showTooltip();
+		});
 
 	//*****************************************************
 	//设置样式
 	//*****************************************************
 	$('.level1').attr('title', '打开/关闭菜单')
-
-	//打开页面时列表默认关闭状态
-	$(".level1").children().hide();
-
 
 	//*****************************************************
 	//菜单的点击事件
@@ -46,13 +55,11 @@ $(function() {
 	// $title.style.color
 
 	$('#title').click(function() {
-		$('#title').html('标题变一变');
+		$('#title').html('标题变一变 ' + Math.random());
 	});
 
 	// 测试用 jquery 的 click 方法执行页面里单独的方法
 	$('#testSB').click(testStringBuilder);
-
-	$('#toggle').click(testToggle);
 
 	//显示全部按钮方法绑定
 	$('#btnShowAll').click(showAll);
@@ -61,22 +68,14 @@ $(function() {
 		location.href = 'index2.html';
 	})
 
-	$("#Count").click(function() {
-
-		var arrays = new Array();
-		var items = document.getElementsByName("check");
-
-		for (var i = 0; i < items.length; i++)
-			if (items[i].checked)
-				arrays.push(items[i].value);
-		// console.info(arrays.length);
+	//Toggle 测试
+	$("#toggle").click(function() {
+		alert(0);
 	});
 
 	//判断 checkbox 选中状态
 	var check_size = $("input[name='check']:checked");
 	console.info("lz = " + check_size.length);
-
-
 
 	// 数码品牌列表
 	var catagory = [

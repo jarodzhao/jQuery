@@ -39,14 +39,25 @@ testStringBuilder = function() {
 }
 
 /**
- * 测试 Toggle() 方法
- * @return {[void]}
+ * 显示动态提示框 tooltip
+ * @param  {[type]} t [description]
+ * @return {[type]}   [description]
  */
-testToggle = function() {
-	$checkbox = $('input'); // console.info($checkbox);
-	for (var i = 0; i < $checkbox.length; i++) {
-		var cb = $checkbox[i];
-		console.info(cb.checked);
+showTooltip = function(t) {
+	var x = 10;
+	var y = 20;
+	if (t) {
+		var Title = t.title;
+		t.title = "";
+		var tooltip = "<div id='tooltip'>" + Title + "</div>";
+		$('body').append(tooltip);
+		$('#tooltip').css({
+			'top': (t.pageY + y) + 'px'
+		}, {
+			'top': (t.pageX + x) + 'px'
+		}, )
+	} else {
+		t.title = Title;
+		$('#tooltip').remove();
 	}
-
-}
+};

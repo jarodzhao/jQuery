@@ -1,29 +1,39 @@
-$(function(){
+$(function() {
 
-	//给列表设置样式
-	// $('ul li').addClass('li-no-style');
+	//*****************************************************
+	//设置样式
+	//*****************************************************
+	$('.level1 > a').attr('title', '打开/关闭菜单')
 
 	//列表默认关闭状态
 	$(".level1 > a").next().hide();
 
+
+	//*****************************************************
 	//菜单的点击事件
-	$(".level1 > a").click(function(){
+	//*****************************************************
+	$(".level1 > a").click(function() {
 		// 打开/关闭菜单子项
-		if($(this).hasClass('current')){
+		if ($(this).hasClass('current')) {
 			$(this).removeClass('current').next().hide();
 			return false;
-		}else{
+		} else {
 			$(this).addClass("current")
-			.next().show();	
+				.next().show();
 			return false;
 		}
 	});
 
-	// css 选择器为什么不能用? 
+	// css 选择器为什么不能用?
+	// 因为 $('xxx')是jquery对象,而jquery对象是一个数组
+	// 用$('xxx')[0].style.color='red'
 	// $('#title').style.color='red';
-	document.getElementById('title').style.color='red';
+	// document.getElementById('title').style.color='red';
+	$title = $('#title')[0];
+	$title.style.color = 'green';
+	// $title.style.color
 
-	$('#title').click(function(){
+	$('#title').click(function() {
 		$('#title').html('标题变一变');
 	});
 
@@ -35,43 +45,35 @@ $(function(){
 	//显示全部按钮方法绑定
 	$('#btnShowAll').click(showAll);
 
-	$("#Count").click(function(){
+	$('#showMenu').click(function() {
+		location.href = 'index2.html';
+	})
+
+	$("#Count").click(function() {
 
 		var arrays = new Array();
 		var items = document.getElementsByName("check");
 
-		for (var i = 0; i < items.length; i++) 
-			if(items[i].checked)
+		for (var i = 0; i < items.length; i++)
+			if (items[i].checked)
 				arrays.push(items[i].value);
-			console.info(arrays.length);
-		});
+		// console.info(arrays.length);
+	});
 
+	//判断 checkbox 选中状态
 	var check_size = $("input[name='check']:checked");
-	// console.info("lz = " + check_size.length);
+	console.info("lz = " + check_size.length);
 
-	// 传统方式写多行代码
-	var item = document.getElementById("tb");
-	var tbody = item.getElementsByTagName("tbody")[0];
-	var trs = tbody.getElementsByTagName("tr");
 
-	for(var i = 0; i < trs.length; i++)
-		if(i % 2 == 0)
-			// trs[i].style.backgroundColor='#ffffff';
-
-	// jQuery 方式一句搞定
-	$("#tb tr:odd").css("background","#efefef");
-
-	// jQuery 的 class 选择器，以及 css 属性设置
-	// $('.level1:even').css('background','#eef');
-	// $('.level1').css('background','#fff');
 
 	// 数码品牌列表
 	var catagory = [
-	'佳能','索尼','三星',
-	'尼康','松下','卡西欧',
-	'富士','柯达','宾得',	
-	'理光','奥林巴斯','明基',
-	'爱国者','其他品牌'];	//14
+		'佳能', '索尼', '三星',
+		'尼康', '松下', '卡西欧',
+		'富士', '柯达', '宾得',
+		'理光', '奥林巴斯', '明基',
+		'爱国者', '其他品牌'
+	]; //14
 
 	// 随机数
 	var sum = 0;
@@ -89,7 +91,7 @@ $(function(){
 	var $catagory = $('#catagory');
 
 	// 设置表格 border 属性
-	$catagory.attr('border','1');
+	$catagory.attr('border', '1');
 
 	// 行循环开始
 	for (var i = 0; i < col; i++) {
@@ -101,17 +103,17 @@ $(function(){
 		for (var j = 0; j < row; j++) {
 
 			// 如果品牌列表中的元素不为空值
-			if(catagory[count])
+			if (catagory[count])
 				item = catagory[count];
 
 			count++;
-			sum = getRandSum(1000,35000);
+			sum = getRandSum(1000, 35000);
 
 			// 表格单元格
 			$catagory.append('<td>' + item + '(' + Math.floor(sum) + ')' + '</td>');
 
 			// 循环次数达到品牌列表的总数，跳出循环
-			if(count == catagory.length) return;
+			if (count == catagory.length) return;
 		}
 		//为什么第一行会输出 <tr></tr>，显示效果正常
 		$catagory.append('</tr>');
@@ -120,4 +122,3 @@ $(function(){
 	//为什么这里的 按钮事件 不执行!?
 	// $('#btnShowAll').click(showAll);
 });
-

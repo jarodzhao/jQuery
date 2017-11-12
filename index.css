@@ -1,6 +1,10 @@
 body,a,input,button {
 	font-size: 12px;
 	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
 }
 #tb,#catagory {
 	width: 500px;
@@ -18,8 +22,10 @@ body,a,input,button {
 	line-height: 30px;
 }
 .box{
+	/*border-top: 1px solid #ccccff;*/
+	height: 20px;
 	width: 200px;
-	background: #efefef;
+	background: #ccf;
 	text-align: center;
 }
 .menu{
@@ -28,7 +34,9 @@ body,a,input,button {
 	padding: 0px;
 }
 .level1{
-	border: 1px solid #ccccff;
+	border-left: 1px solid #ccccff;
+	border-bottom: 1px solid #ccccff;
+	border-right: 1px solid #ccccff;
 	line-height: 30px;
 	list-style-type: none;
 	background: #eeeeff;

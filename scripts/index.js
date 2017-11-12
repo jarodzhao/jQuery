@@ -1,12 +1,24 @@
 $(function() {
 
+	$('.level1')
+	.mouseover(function(){
+		$(this).css('color','#f00');
+	}).click(function(){
+		if(!$(this).hasClass('open'))
+			$(this).addClass('open').children('.level2').show();
+		else
+			$(this).removeClass('open').children('.level2').hide();
+	}).mouseout(function(){
+		$(this).css('color','#00f');
+	});
+
 	//*****************************************************
 	//设置样式
 	//*****************************************************
-	$('.level1 > a').attr('title', '打开/关闭菜单')
+	$('.level1').attr('title', '打开/关闭菜单')
 
-	//列表默认关闭状态
-	$(".level1 > a").next().hide();
+	//打开页面时列表默认关闭状态
+	$(".level1").children().hide();
 
 
 	//*****************************************************

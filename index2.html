@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='notesApp'>
 <head>
 	<meta charset="UTF-8">
 	<title>测试菜单功能</title>
 	<link rel="stylesheet" href="index.css">
-	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="scripts/jquery-1.11.1.js"></script>
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/myAngular.js"></script>
 	<script src="scripts/menu.js"></script>
+	<script src="scripts/moment-with-locales.js"></script>
 </head>
-<body>
+<body ng-controller='MainCtrl as ctrl'>
 
 	<a href="index.html">返回主页</a>
 	
 	<br><br>
 	
 	<span id="title">我的菜单</span>
-
 	<div id="menu"></div>
+
+	<br><br>
+
+	<div id="content">
+		<span>内层元素</span>
+	</div>
+
+	<button id="btn">动画</button>
+	<br><br>
+	<hr>
+
+	<button id="btn" ng-click='ctrl.changeMsg()'>AngularJS</button>
+	<span id="date0"></span>
+	<br><br>
+	<input type="text" ng-model="name">
+	<br>
+	Hello {{ctrl.msg}} {{ctrl.hello}}
+	
 
 </body>
 </html>
+

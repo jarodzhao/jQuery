@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>iframe 测试</title>
+  <script src="jquery1.11.3.js"></script>	
+ </head>
+ <script>
+	function test(){
+		$("#frame1").attr("src","http://www.sogou.com");
+	}
+ </script>
+ <body>
+ 	<input type="button" value="000000000" onclick="test()">
+	<br>
+  <iframe src="http://www.baidu.com" frameborder="0" width="800" height="600" id="frame1"></iframe>
+ </body>
+</html>

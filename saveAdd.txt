@@ -1,0 +1,23 @@
+
+function saveAdd(){
+//    debugger;
+    
+    $("#saveButton").button('loading').queue(function() {
+        $.ajax({
+            type: 'post',
+            url: path + "emergency/saveEmergency.do",
+            data: {
+                emergencyName: $("#emergencyName").val()
+            },
+            success: function(data){
+                if(data == 1){
+                    console.log(11);
+                    $("#saveButton").button('reset').dequeue();
+                }
+            },
+            error: function(){
+                alert(0);
+            }
+        })
+    })
+}

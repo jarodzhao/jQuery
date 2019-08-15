@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="UTF-8">
+	<!-- easyui 相关 -->
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/icon.css">
+	<script type="text/javascript" src="js/easyUI/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	$(function(){
+		$("#k1").combobox({
+			valueField: 'value',
+			textField: 'text',
+			data: a(),
+			onSelect: function(rec){
+				$("#k2").combobox('setText', $("#k2").combobox('getText'));
+				$("#k2").combobox('loadData', b(rec.text));
+			}
+		});
+
+		$("#k2").combobox({
+			editable: true,
+			multiple: true,
+			separator: ' | ',
+			valueField: 'value',
+			textField: 'text',
+			onSelect: function(rec){
+				$("#k2").combobox('setText', $("#k2").combobox('getText') + ' | ');
+			}
+		});
+
+	});
+
+	function a(){
+		var res = [];
+		for(var i=0;i<7;i++){
+			var v = { text: 'aaa#'+i, value:'111#'+i};
+			res.push(v);
+		}
+		return res;
+	};
+
+	function b(val){
+		var res = [];
+		for(var i=0;i<4;i++){
+			var v = {text: val+i, value: 'bb'+i};
+			res.push(v);
+		}
+		return res;
+	}
+
+	function testJump(){
+		for(var i=0;i<10;i++){
+			console.log(i);
+			if(i==5){
+				return;
+			}
+		}
+	}
+
+	function array2str(){
+		var a = [];
+		for(var i=0;i<5;i++){
+			a.push('a#'+i);
+		}
+		console.log(a.toString());
+		alert('000');
+		window.location.reload();
+	}
+</script>
+
+<input id='k1' style='width:200px'> - <input id='k2' style='width:700px'>
+<button onclick='array2str()'>测试循环跳出</button>
+</body>
+</html>

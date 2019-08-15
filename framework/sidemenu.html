@@ -1,0 +1,71 @@
+<template>
+  <div>
+        <h2>Basic SideMenu</h2>
+        <LinkButton @click="toggle()" style="margin-bottom:20px">Toggle</LinkButton>
+        <SideMenu :style="{width:width+'px'}"
+                :data="menus"
+                :collapsed="collapsed"
+                @selectionChange="selection=$event">
+        </SideMenu>
+        <p v-if="selection">You selected: {{selection.text}}</p>
+  </div>
+</template>
+ 
+<script>
+export default {
+  data() {
+    return {
+      width: 200,
+      collapsed: false,
+      selection: null,
+      menus: [
+        {
+          text: "Item1",
+          iconCls: "icon-sum",
+          state: "open",
+          children: [
+            {
+              text: "Option1"
+            },
+            {
+              text: "Option2"
+            },
+            {
+              text: "Option3",
+              children: [
+                {
+                  text: "Option31"
+                },
+                {
+                  text: "Option32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          text: "Item2",
+          iconCls: "icon-more",
+          children: [
+            {
+              text: "Option4"
+            },
+            {
+              text: "Option5"
+            },
+            {
+              text: "Option6"
+            }
+          ]
+        }
+      ]
+    };
+  },
+  methods: {
+    toggle() {
+      this.collapsed = !this.collapsed;
+      this.width = this.collapsed ? 50 : 200;
+    }
+  }
+};
+</script>

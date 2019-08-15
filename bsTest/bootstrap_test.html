@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap 测试</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-table/bootstrap-table.min.css">
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap-table/bootstrap-table.min.js"></script>
+	<script src="bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+	<script src="js/bst.js"></script>
+</head>
+<body>
+	<div id="toolbar" style="padding-left: 10px;">
+		<div class="btn-group">
+			<button id="btnExpand" class="btn-default btn">
+				<span class="glyphicon glyphicon-resize-full"></span> 展开所有
+			</button>
+			<button id="btnCollapse" class="btn-default btn">
+				<span class="glyphicon glyphicon-resize-small"></span> 折叠所有
+			</button>
+			<!-- Single button -->
+			<div class="btn-group">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    		<span id='expandIcon' style="margin-right:3px;" class="glyphicon glyphicon-resize-full"></span>
+	    		<span id='addIcon' style="display: none;" class="glyphicon glyphicon-plus"></span>
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li>
+			    	<a href="javascript: toggleDblClick(true);">
+			    		<span style="margin-left: 0px;" class="glyphicon glyphicon-resize-full"></span>
+			    		<span style="margin: 0px 5px;">双击展开节点条目</span>
+			    	</a>
+			    </li>
+			    <li>
+			    	<a href="javascript: toggleDblClick(false);">
+			    		<span style="margin-left: 0px;" class="glyphicon glyphicon-plus"></span>
+			    		<span style="margin: 0px 5px;">双击添加节点条目</span>
+					</a>
+				</li>
+			  </ul>
+			</div>
+		</div>
+		<input type="hidden" id="dblClick" value='0'>
+	</div>
+
+	<div id="container" style="width:100%; margin: 0 auto;">
+
+		<div id="c1" class="col-lg-2" style="background-color: #aaa; height: 200px;">
+			0
+		</div>
+
+		<div id="c2" class="col-lg-8" style="background-color: #efefef; height: 200px; padding: 10px; line-height: 50px;">
+			
+			<div class="btn-group btn-group-xs">
+				<button type="button" class="btn btn-default">button</button>
+				<button type="button" class="btn btn-danger">button</button>
+				<button type="button" class="btn btn-success">button</button>
+				<button type="button" class="btn btn-primary">button</button>
+				<button type="button" class="btn btn-info">button</button>
+				<button type="button" class="btn btn-warning">button</button>
+			</div>
+<br>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-default">button</button>
+				<button type="button" class="btn btn-danger">button</button>
+				<button type="button" class="btn btn-success">button</button>
+				<button type="button" class="btn btn-primary">button</button>
+				<button type="button" class="btn btn-info">button</button>
+				<button type="button" class="btn btn-warning">button</button>
+			</div>
+<br>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">button</button>
+				<button type="button" class="btn btn-danger">button</button>
+				<button type="button" class="btn btn-success">button</button>
+				<button type="button" class="btn btn-primary">button</button>
+				<button type="button" class="btn btn-info">button</button>
+				<button type="button" class="btn btn-warning">button</button>
+			</div>
+		</div>
+
+		<div id="c2" class="col-lg-2" style="background-color: #aaa; height: 200px;">
+			1
+		</div>
+
+		<table id="table0"></table>
+
+	</div>
+
+	<div class="modal fade" id="testModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<span aria-hidden="true">&times;</span>
+	        </button>
+	        <h4 class="modal-title">测试模态框</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>主题内容在这里显示。。。</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary">保存操作</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</body>
+</html>

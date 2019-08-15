@@ -1,0 +1,272 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'oracledb' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of D:\Git\jQuery\es6\package.json
+5 verbose installManyTop reading scoped package data from D:\Git\jQuery\es6\node_modules\cheerio\package.json
+6 verbose installManyTop reading scoped package data from D:\Git\jQuery\es6\node_modules\mysql\package.json
+7 verbose readDependencies loading dependencies from D:\Git\jQuery\es6\package.json
+8 silly cache add args [ 'oracledb', null ]
+9 verbose cache add spec oracledb
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'oracledb',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'oracledb',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: 'latest',
+10 silly cache add   type: 'tag' }
+11 silly addNamed oracledb@latest
+12 verbose addNamed "latest" is being treated as a dist-tag for oracledb
+13 info addNameTag [ 'oracledb', 'latest' ]
+14 silly mapToRegistry name oracledb
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry data Result {
+17 silly mapToRegistry   raw: 'oracledb',
+17 silly mapToRegistry   scope: null,
+17 silly mapToRegistry   name: 'oracledb',
+17 silly mapToRegistry   rawSpec: '',
+17 silly mapToRegistry   spec: 'latest',
+17 silly mapToRegistry   type: 'tag' }
+18 silly mapToRegistry uri https://registry.npmjs.org/oracledb
+19 verbose addNameTag registry:https://registry.npmjs.org/oracledb not in flight; fetching
+20 verbose request uri https://registry.npmjs.org/oracledb
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 08:53:25
+23 verbose request id 275aaf325db57e54
+24 http request GET https://registry.npmjs.org/oracledb
+25 http 200 https://registry.npmjs.org/oracledb
+26 verbose headers { date: 'Thu, 11 Apr 2019 00:53:26 GMT',
+26 verbose headers   'content-type': 'application/json',
+26 verbose headers   'transfer-encoding': 'chunked',
+26 verbose headers   connection: 'keep-alive',
+26 verbose headers   'set-cookie': [ '__cfduid=d2cc5226182ba0da4982d6816c2733ec91554944005; expires=Fri, 10-Apr-20 00:53:25 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+26 verbose headers   'cf-cache-status': 'REVALIDATED',
+26 verbose headers   'cache-control': 'max-age=300',
+26 verbose headers   'cf-ray': '4c58fbc39df2b11c-HKG',
+26 verbose headers   etag: 'W/"520911f634b0955a77ee145bebdfba86"',
+26 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+26 verbose headers   'last-modified': 'Thu, 21 Feb 2019 07:39:10 GMT',
+26 verbose headers   vary: 'accept-encoding, accept',
+26 verbose headers   'x-amz-meta-rev': '94-42b5420677e006fe20aa2428546e2b49',
+26 verbose headers   server: 'cloudflare',
+26 verbose headers   'content-encoding': 'gzip' }
+27 silly get cb [ 200,
+27 silly get   { date: 'Thu, 11 Apr 2019 00:53:26 GMT',
+27 silly get     'content-type': 'application/json',
+27 silly get     'transfer-encoding': 'chunked',
+27 silly get     connection: 'keep-alive',
+27 silly get     'set-cookie': [ '__cfduid=d2cc5226182ba0da4982d6816c2733ec91554944005; expires=Fri, 10-Apr-20 00:53:25 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+27 silly get     'cf-cache-status': 'REVALIDATED',
+27 silly get     'cache-control': 'max-age=300',
+27 silly get     'cf-ray': '4c58fbc39df2b11c-HKG',
+27 silly get     etag: 'W/"520911f634b0955a77ee145bebdfba86"',
+27 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+27 silly get     'last-modified': 'Thu, 21 Feb 2019 07:39:10 GMT',
+27 silly get     vary: 'accept-encoding, accept',
+27 silly get     'x-amz-meta-rev': '94-42b5420677e006fe20aa2428546e2b49',
+27 silly get     server: 'cloudflare',
+27 silly get     'content-encoding': 'gzip' } ]
+28 verbose get saving oracledb to C:\Users\ht_z\AppData\Roaming\npm-cache\registry.npmjs.org\oracledb\.cache.json
+29 verbose correctMkdir C:\Users\ht_z\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+30 silly addNameTag next cb for oracledb with tag latest
+31 silly addNamed oracledb@3.1.2
+32 verbose addNamed "3.1.2" is a plain semver version for oracledb
+33 silly mapToRegistry name oracledb
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'oracledb',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'oracledb',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/oracledb
+38 verbose addRemoteTarball https://registry.npmjs.org/oracledb/-/oracledb-3.1.2.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/oracledb/-/oracledb-3.1.2.tgz',
+39 verbose addRemoteTarball   '4d7df7b8eda161d4e645837cd43c530232d139e8' ]
+40 info retry fetch attempt 1 at 08:53:27
+41 info attempt registry request try #1 at 08:53:27
+42 http fetch GET https://registry.npmjs.org/oracledb/-/oracledb-3.1.2.tgz
+43 http fetch 200 https://registry.npmjs.org/oracledb/-/oracledb-3.1.2.tgz
+44 silly fetchAndShaCheck shasum 4d7df7b8eda161d4e645837cd43c530232d139e8
+45 verbose addTmpTarball C:\Users\ht_z\AppData\Local\Temp\npm-2396-caa39033\registry.npmjs.org\oracledb\-\oracledb-3.1.2.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for oracledb@3.1.2
+47 verbose correctMkdir C:\Users\ht_z\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+48 silly cache afterAdd oracledb@3.1.2
+49 verbose afterAdd C:\Users\ht_z\AppData\Roaming\npm-cache\oracledb\3.1.2\package\package.json not in flight; writing
+50 verbose correctMkdir C:\Users\ht_z\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+51 verbose afterAdd C:\Users\ht_z\AppData\Roaming\npm-cache\oracledb\3.1.2\package\package.json written
+52 silly install resolved [ { name: 'oracledb',
+52 silly install resolved     version: '3.1.2',
+52 silly install resolved     description: 'A Node.js module for Oracle Database access',
+52 silly install resolved     license: 'Apache-2.0',
+52 silly install resolved     homepage: 'http://oracle.github.io/node-oracledb/',
+52 silly install resolved     keywords:
+52 silly install resolved      [ 'Oracle',
+52 silly install resolved        'Database',
+52 silly install resolved        'official',
+52 silly install resolved        'DB',
+52 silly install resolved        'SQL',
+52 silly install resolved        'JSON',
+52 silly install resolved        'PL/SQL',
+52 silly install resolved        'OCI',
+52 silly install resolved        'API',
+52 silly install resolved        'client',
+52 silly install resolved        'library',
+52 silly install resolved        'driver',
+52 silly install resolved        'add-on',
+52 silly install resolved        'extension',
+52 silly install resolved        'binding',
+52 silly install resolved        'interface',
+52 silly install resolved        'adapter',
+52 silly install resolved        'module' ],
+52 silly install resolved     repository:
+52 silly install resolved      { type: 'git',
+52 silly install resolved        url: 'git://github.com/oracle/node-oracledb.git' },
+52 silly install resolved     scripts:
+52 silly install resolved      { install: 'node package/install.js',
+52 silly install resolved        prune: 'node package/prunebinaries.js' },
+52 silly install resolved     engines: { node: '>=6' },
+52 silly install resolved     maintainers: [ [Object], [Object] ],
+52 silly install resolved     bugs: { url: 'https://github.com/oracle/node-oracledb/issues' },
+52 silly install resolved     main: './index.js',
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/oracledb/-/oracledb-3.1.2.tgz',
+52 silly install resolved     _integrity: '',
+52 silly install resolved     _from: 'oracledb@latest',
+52 silly install resolved     _id: 'oracledb@3.1.2',
+52 silly install resolved     _nodeVersion: '11.10.0',
+52 silly install resolved     _npmVersion: '6.7.0',
+52 silly install resolved     dist:
+52 silly install resolved      { integrity: 'sha512-DOBKpUlfvGAX6bcpuPGtPVVfOOUqFue8eLjbnnmkDyBTU+YuH+gXHRy4ftlFzkHBXYkrSGenFJrXy8dDfEVXCg==',
+52 silly install resolved        shasum: '4d7df7b8eda161d4e645837cd43c530232d139e8',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/oracledb/-/oracledb-3.1.2.tgz',
+52 silly install resolved        fileCount: 44,
+52 silly install resolved        unpackedSize: 7315085,
+52 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcblWaCRA9TVsSAnZWagAATroP/Re7jHvCwmhpgJXiguYA\n3c1Uw2fZFW5eJCtHISIvbjzpICQIeAJ4ncFpNUrZnYLs4BLr/U/Ha8XHCsGJ\nEw+e+XyOF0tiJh5iXbQHHZLmDwxqGiTnJBHWISXO35I1HkXli8L/GPw09azX\nr5HMn2Oj3qwlrRxPRZ2mNkiFOkuf3HbSi47o05OhMTo33Z3udRHJxKYulNH3\nDFffN0g+Dv89pKHwmRqhxGLws3LlChV5UXxEQLyHC2HDK+EPeEwufW2s6Utm\n9xlt2rYXtLvG4HXZ8CvcMlpWsJggb+XcgAX0W/uT8DKCc6dHihbv5ZsLcnDy\nt5ZLLtLLTWafchVn2xVVDlXa1yYjbhA8wwv5VYYXrRc7fymSyNPPXznXUAhY\nxhbJkYWFb0D6+Zl6REDhV/ur2DbRsuAApYeqopQ7h53gzaA9sabGdjtmslhQ\nMaCcY6EQs/efWU0r2BgbEzPUJWJ2shrKjzn5fD9MxWraLI8mfdgto+ssCrzm\nrG1wEMoNdxILKTq/B5Ar6GPf3HVV0YpY6fOznZAB5hDATxFsRVLxSOh8SuzL\n/1APlvwvsMM4Uz3N2SU/7QYCyA71/aE6eTMa865Y+uVB4xyzsNT9pMkd05iq\n4hMUjrGacBecJEREF3TalJjap9XxRiSmiBheCWk5QT9jEbRrTJQcwgjLcFWg\nbSWs\r\n=/1Bc\r\n-----END PGP SIGNATURE-----\r\n' },
+52 silly install resolved     _npmUser: { name: 'cjbj', email: 'christopher.jones@oracle.com' },
+52 silly install resolved     directories: {},
+52 silly install resolved     _npmOperationalInternal:
+52 silly install resolved      { host: 's3://npm-registry-packages',
+52 silly install resolved        tmp: 'tmp/oracledb_3.1.2_1550734745507_0.6642405623911647' },
+52 silly install resolved     _hasShrinkwrap: false,
+52 silly install resolved     _shasum: '4d7df7b8eda161d4e645837cd43c530232d139e8' } ]
+53 info install oracledb@3.1.2 into D:\Git\jQuery\es6
+54 info installOne oracledb@3.1.2
+55 verbose installOne of oracledb to D:\Git\jQuery\es6 not in flight; installing
+56 verbose correctMkdir C:\Users\ht_z\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+57 verbose lock using C:\Users\ht_z\AppData\Roaming\npm-cache\_locks\oracledb-26822d2ff5560e29.lock for D:\Git\jQuery\es6\node_modules\oracledb
+58 warn engine oracledb@3.1.2: wanted: {"node":">=6"} (current: {"node":"4.4.3","npm":"2.15.1"})
+59 silly install write writing oracledb 3.1.2 to D:\Git\jQuery\es6\node_modules\oracledb
+60 verbose unbuild node_modules\oracledb
+61 silly gentlyRm D:\Git\jQuery\es6\node_modules\oracledb is being purged from base D:\Git\jQuery\es6
+62 verbose gentlyRm don't care about contents; nuking D:\Git\jQuery\es6\node_modules\oracledb
+63 verbose tar unpack C:\Users\ht_z\AppData\Roaming\npm-cache\oracledb\3.1.2\package.tgz
+64 verbose tar unpacking to D:\Git\jQuery\es6\node_modules\oracledb
+65 silly gentlyRm D:\Git\jQuery\es6\node_modules\oracledb is being purged
+66 verbose gentlyRm don't care about contents; nuking D:\Git\jQuery\es6\node_modules\oracledb
+67 silly gunzTarPerm modes [ '777', '666' ]
+68 silly gunzTarPerm extractEntry package.json
+69 silly gunzTarPerm extractEntry CHANGELOG.md
+70 silly gunzTarPerm extractEntry index.js
+71 silly gunzTarPerm extractEntry LICENSE.md
+72 silly gunzTarPerm extractEntry README.md
+73 silly gunzTarPerm extractEntry build/Release/oracledb-abi48-darwin-x64.node
+74 silly gunzTarPerm extractEntry build/Release/oracledb-abi48-darwin-x64.node-buildinfo.txt
+75 silly gunzTarPerm extractEntry build/Release/oracledb-abi48-linux-x64.node
+76 silly gunzTarPerm extractEntry build/Release/oracledb-abi48-linux-x64.node-buildinfo.txt
+77 silly gunzTarPerm extractEntry build/Release/oracledb-abi48-win32-x64.node
+78 silly gunzTarPerm extractEntry build/Release/oracledb-abi48-win32-x64.node-buildinfo.txt
+79 silly gunzTarPerm extractEntry build/Release/oracledb-abi57-darwin-x64.node
+80 silly gunzTarPerm extractEntry build/Release/oracledb-abi57-darwin-x64.node-buildinfo.txt
+81 silly gunzTarPerm extractEntry build/Release/oracledb-abi57-linux-x64.node
+82 silly gunzTarPerm extractEntry build/Release/oracledb-abi57-linux-x64.node-buildinfo.txt
+83 silly gunzTarPerm extractEntry build/Release/oracledb-abi57-win32-x64.node
+84 silly gunzTarPerm extractEntry build/Release/oracledb-abi57-win32-x64.node-buildinfo.txt
+85 silly gunzTarPerm extractEntry build/Release/oracledb-abi64-darwin-x64.node
+86 silly gunzTarPerm extractEntry build/Release/oracledb-abi64-darwin-x64.node-buildinfo.txt
+87 silly gunzTarPerm extractEntry build/Release/oracledb-abi64-linux-x64.node
+88 silly gunzTarPerm extractEntry build/Release/oracledb-abi64-linux-x64.node-buildinfo.txt
+89 silly gunzTarPerm extractEntry build/Release/oracledb-abi64-win32-x64.node
+90 silly gunzTarPerm extractEntry build/Release/oracledb-abi64-win32-x64.node-buildinfo.txt
+91 silly gunzTarPerm extractEntry build/Release/oracledb-abi67-darwin-x64.node
+92 silly gunzTarPerm extractEntry build/Release/oracledb-abi67-darwin-x64.node-buildinfo.txt
+93 silly gunzTarPerm extractEntry build/Release/oracledb-abi67-linux-x64.node
+94 silly gunzTarPerm extractEntry build/Release/oracledb-abi67-linux-x64.node-buildinfo.txt
+95 silly gunzTarPerm extractEntry build/Release/oracledb-abi67-win32-x64.node
+96 silly gunzTarPerm extractEntry build/Release/oracledb-abi67-win32-x64.node-buildinfo.txt
+97 silly gunzTarPerm extractEntry lib/connection.js
+98 silly gunzTarPerm extractEntry lib/lob.js
+99 silly gunzTarPerm extractEntry lib/oracledb.js
+100 silly gunzTarPerm extractEntry lib/pool.js
+101 silly gunzTarPerm extractEntry lib/querystream.js
+102 silly gunzTarPerm extractEntry lib/resultset.js
+103 silly gunzTarPerm extractEntry lib/sodaCollection.js
+104 silly gunzTarPerm extractEntry lib/sodaDatabase.js
+105 silly gunzTarPerm extractEntry lib/sodaDocCursor.js
+106 silly gunzTarPerm extractEntry lib/sodaDocument.js
+107 silly gunzTarPerm extractEntry lib/sodaOperation.js
+108 silly gunzTarPerm extractEntry lib/util.js
+109 silly gunzTarPerm extractEntry package/install.js
+110 silly gunzTarPerm extractEntry package/prunebinaries.js
+111 silly gunzTarPerm extractEntry package/README.md
+112 verbose write writing to D:\Git\jQuery\es6\node_modules\oracledb\package.json
+113 info preinstall oracledb@3.1.2
+114 verbose readDependencies loading dependencies from D:\Git\jQuery\es6\node_modules\oracledb\package.json
+115 verbose readDependencies loading dependencies from D:\Git\jQuery\es6\node_modules\oracledb\package.json
+116 silly install resolved []
+117 verbose about to build D:\Git\jQuery\es6\node_modules\oracledb
+118 info build D:\Git\jQuery\es6\node_modules\oracledb
+119 info linkStuff oracledb@3.1.2
+120 silly linkStuff oracledb@3.1.2 has D:\Git\jQuery\es6\node_modules as its parent node_modules
+121 verbose linkBins oracledb@3.1.2
+122 verbose linkMans oracledb@3.1.2
+123 verbose rebuildBundles oracledb@3.1.2
+124 info install oracledb@3.1.2
+125 verbose unsafe-perm in lifecycle true
+126 info oracledb@3.1.2 Failed to exec install script
+127 verbose unlock done using C:\Users\ht_z\AppData\Roaming\npm-cache\_locks\oracledb-26822d2ff5560e29.lock for D:\Git\jQuery\es6\node_modules\oracledb
+128 verbose stack Error: oracledb@3.1.2 install: `node package/install.js`
+128 verbose stack Exit status 87
+128 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+128 verbose stack     at emitTwo (events.js:87:13)
+128 verbose stack     at EventEmitter.emit (events.js:172:7)
+128 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+128 verbose stack     at emitTwo (events.js:87:13)
+128 verbose stack     at ChildProcess.emit (events.js:172:7)
+128 verbose stack     at maybeClose (internal/child_process.js:827:16)
+128 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+129 verbose pkgid oracledb@3.1.2
+130 verbose cwd D:\Git\jQuery\es6
+131 error Windows_NT 10.0.17763
+132 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "oracledb"
+133 error node v4.4.3
+134 error npm  v2.15.1
+135 error code ELIFECYCLE
+136 error oracledb@3.1.2 install: `node package/install.js`
+136 error Exit status 87
+137 error Failed at the oracledb@3.1.2 install script 'node package/install.js'.
+137 error This is most likely a problem with the oracledb package,
+137 error not with npm itself.
+137 error Tell the author that this fails on your system:
+137 error     node package/install.js
+137 error You can get information on how to open an issue for this project with:
+137 error     npm bugs oracledb
+137 error Or if that isn't available, you can get their info via:
+137 error
+137 error     npm owner ls oracledb
+137 error There is likely additional logging output above.
+138 verbose exit [ 1, true ]
+139 verbose unbuild node_modules\oracledb
+140 info preuninstall oracledb@3.1.2
+141 info uninstall oracledb@3.1.2
+142 verbose unbuild rmStuff oracledb@3.1.2 from D:\Git\jQuery\es6\node_modules
+143 info postuninstall oracledb@3.1.2
+144 silly gentlyRm D:\Git\jQuery\es6\node_modules\oracledb is being purged from base D:\Git\jQuery\es6
+145 verbose gentlyRm don't care about contents; nuking D:\Git\jQuery\es6\node_modules\oracledb
+146 silly vacuum-fs purging D:\Git\jQuery\es6\node_modules\oracledb
+147 silly vacuum-fs quitting because other entries in D:\Git\jQuery\es6\node_modules

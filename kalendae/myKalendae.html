@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 我的 DEMO </title>
+    <link rel="stylesheet" href="build/kalendae.css" type="text/css" charset="utf-8">
+    <!-- <script src="src/moment.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- <script src="build/kalendae.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="../scripts/jquery-3.2.1.js"></script>
+    <script src="build/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css" media="screen">
+
+    </style>
+    <script type="text/javascript">
+    $(function() {
+        $("#execDate").kalendae({
+            mode: 'multiple',
+            months: 3,
+            format: 'YYYY-MM-DD'
+        });
+
+        $("#clearDate").click(function() {
+            console.log($("#execDate").val());
+            $("#execDate").val("");
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <input id="execDate" style="width:200px;" readonly></input>
+    <button id="clearDate">清除选择</button>
+</body>
+
+</html>

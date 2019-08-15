@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态添加 combobox</title>
+	<!-- easyui 相关 -->
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/icon.css">
+	<script type="text/javascript" src="js/easyUI/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/locale/easyui-lang-zh_CN.js"></script>
+	<script>
+		$(function(){
+
+		    var html = "<input type='text' id='type3' class='a' />";
+		    $("#btn1").on('click', function (e) {
+		        
+		        /* 生成新对象，插入到页面 */
+		        $('#btn1').after(html);
+
+		        //setTimeout(function () {
+		            $('#type3').combobox({
+		                data: getData(),
+		                textField: 'text',
+		                valueField: 'value'
+		            });
+		        //}, 0);
+		    });
+
+		});
+
+		function getData(){
+			var list = [];
+			var vo = {};
+			for(var i=0;i<5;i++){
+				vo={'text': 'text #' + i, 'value': ' value #' + i};
+				list.push(vo);
+			}
+			return list;
+		}
+	</script>
+</head>
+<body>
+	<button id="btn1">button</button>
+	<div id="test" style="width: 200px; background-color: #eee;">
+	</div>
+</body>
+</html>

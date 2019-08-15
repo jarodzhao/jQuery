@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>检测浏览器版本</title>
+</head>
+<body>
+	<span id="ver"></span>
+</body>
+</html>
+<script src="js/jquery1.11.3.js"></script>
+
+<script type="text/javascript">
+    var browserMatch = uaMatch();
+    $("#ver").html(browserMatch.browser + "<br />" + browserMatch.version);
+
+    function uaMatch() {
+	    var userAgent = navigator.userAgent, 
+		    rMsie = /(msie\s|trident.*rv:)([\w.]+)/, 
+		    rFirefox = /(firefox)\/([\w.]+)/, 
+		    rOpera = /(opera).+version\/([\w.]+)/, 
+		    rChrome = /(chrome)\/([\w.]+)/, 
+		    rSafari = /version\/([\w.]+).*(safari)/;
+
+        var ua = userAgent.toLowerCase();
+
+        var match = rMsie.exec(ua);
+        if (match != null) {
+            return { browser : "IE", version : match[2] || "0" };
+        }
+        var match = rFirefox.exec(ua);
+        if (match != null) {
+            return { browser : match[1] || "", version : match[2] || "0" };
+        }
+        var match = rOpera.exec(ua);
+        if (match != null) {
+            return { browser : match[1] || "", version : match[2] || "0" };
+        }
+        var match = rChrome.exec(ua);
+        if (match != null) {
+            return { browser : match[1] || "", version : match[2] || "0" };
+        }
+        var match = rSafari.exec(ua);
+        if (match != null) {
+            return { browser : match[2] || "", version : match[1] || "0" };
+        }
+        if (match != null) {
+            return { browser : "", version : "0" };
+        }
+    }
+</script>

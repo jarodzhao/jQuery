@@ -1,18 +1,35 @@
 $(function() {
 
-    var obj = {
-        'wei': [2, 6],
-        'tao': [1, 38],
-        'ze': [9, 0],
-        'bing': [4, 34],
-        'yu': [202, 2]
-    };
+    var ds = '2018-08-08,2018-08-15,2018-08-22,2018-08-29';
+    var ds2 = ds.split(',');
+    console.log(ds2.length);
 
-    var o = objSort2(obj);
-    for(var i in o){
-        console.log(i[0]);
-    }
+    var today = '2018-08-08';
+    console.log(ds2.indexOf(today));
+
+
+    $("#execDate").datepicker({
+        format: 'yyyy-mm-dd',
+        multidate: true,
+        multidateSeparator: ',',
+        language: 'zh-CN',
+        todayHighlight: true,
+        linkField: 'execDate',
+        clearBtn: true
+    });
+
 });
+
+function syncExecDate(){
+    var d = $("#execDate").val();
+    var ds = d.split(',');
+    var html = "";
+    for(var i in ds){
+        html += ds[i] + ",<br />";
+    }
+    $("#syncDate").html(html);
+    console.log($("#syncDate").text());
+}
 
 function objSort2(obj) {
     var arr = Object.keys(obj);

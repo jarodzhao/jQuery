@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./build/kalendae.css" type="text/css">
+    <script type='text/javascript' src='./build/kalendae.standalone.js'></script>
+    <title>KalendaeDemo</title>
+</head>
+<body>
+
+<div  id="datepk"></div>
+<script type="text/javascript">
+    /*使用方式：
+    new Kalendae(指定容器,配置);
+    配置属性注解：
+    months属性表示日历显示几个月，值：1、2、3.....；默认值：1
+    mode属性表示显示的是单选还是多选还是范围，值：'single'、'multiple'、'range'；默认值：'single'
+    subscribe属性表示绑定kalendea指定的事件，支持的事件有change、date-clicked、view-changed
+    */
+    new Kalendae(document.getElementById("datepk"), {
+            months:1,
+            mode:'multiple',
+            subscribe: {
+                   'date-clicked': function (date) {
+                       console.log(date._i, this.getSelected());
+                   }
+               }
+        });
+</script>
+
+</body>
+</html>

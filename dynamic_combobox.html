@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>动态生成 combobox </title>
+    <meta charset="UTF-8">
+	<!-- easyui 相关 -->
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/icon.css">
+	<script type="text/javascript" src="js/easyUI/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			console.log(new Date());
+			$("#type1").combobox({
+				textField: 'text',
+				valueField: 'value',
+				data: createData()
+			});
+
+			$("#type2").combobox({
+				textField: 'text',
+				valueField: 'value',
+				data: createData()
+			});
+
+			$("#button1").click(function(){
+				newB();
+			})
+		});
+
+
+		/* 用事件动态生成一个对象 */
+		function newA(){
+			debugger;
+			var html = "<input type='text' id='type3' class='easyui-combobox' data-options=\"valueField:\'id\', textField:\'text\', data:createData()\" />";
+			$("#test").on('click', 'button', function(e){
+				/* 生成新对象，插入到页面 */
+				$('#type1').after(html);
+			});
+
+			/* 这样可以获取到 dom 对象，但是不知道如何设置 combobox 属性和事件 */
+			$("#test").on('click', 'input[class=a]', function(e){ alert('aa'); });
+
+			/* 获取不到，无法设置 combobox */
+			// $("input[class=a").combobx({
+				//combobox 属性
+			// });
+
+			/* 获取不到动态生成的对象 */
+			$("input[class=a]").text('abc');
+			console.log($("input[class=a")[0]);
+			console.log(guid());
+		}
+
+		/* stack overflow 方法 */
+		function newB(){
+			// debugger;
+			var html = "<input id='type6' class='easyui-combobox'>";
+			$("#test").append = html;
+		}
+		
+
+		/* 准备数据 */
+		function createData(){
+			var list = [], vo = {};
+			for(var i=0;i<10;i++)
+			{
+				vo={ text: 'hello #' + i, value: 'value #' + i, }
+				list.push(vo);
+			}
+			console.log(list);
+			return list;
+		}
+
+		/********************************************************************/
+
+		/* 生成 uuid */
+		function guid() {
+			function s4() {
+				return Math.floor((1 + Math.random()) * 0x10000)
+				.toString(16)
+				.substring(1);
+			}
+			return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+		}
+	</script>
+</head>
+<body>
+	<div id="test">
+		<input type="text" id="type1" />
+		<select id="type2" style="width: 150px;"></select>
+		<button id="button1">动态生成</button>
+	</div>
+</body>
+</html>

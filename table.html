@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格样式</title>
+	<style type="text/css">
+		.ht {
+			margin: 0 auto;
+			border-collapse: collapse;
+		}
+		.ht tr,
+		.ht td,
+		.ht th {
+			border: 1px solid #d2dfea;
+			text-align: center;
+		}
+		.ht td, .ht tr {
+			font-size: 12px;
+			border-collapse: collapse;
+			color: #004080;
+			background-color: #fff;
+		}
+		.ht td,
+		.ht th {
+			height: 30px;
+		}
+		.ht th {
+			background-color: #eef3f7;
+		}
+	</style>
+</head>
+<body>
+
+	<table width="600" class='ht' border="0">
+		<tr>
+			<th>选择</th>
+			<th>巡检内容</th>
+			<th>完成情况</th>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>每月在交接班时间下现场巡视至少5次</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+	</table>		
+
+	<button onclick="go()">确定</button>
+	<button onclick="">返回</button>
+
+<script type="text/javascript">
+	function go(){
+		console.log(Math.random());
+	}
+</script>
+
+</body>
+</html>

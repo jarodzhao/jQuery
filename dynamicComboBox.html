@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动态添加 combobox</title>
+
+    <meta charset="UTF-8">
+	<!-- easyui 相关 -->
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="js/easyUI/themes/icon.css">
+	<script type="text/javascript" src="js/easyUI/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyUI/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var html0="<input id='type0' class='easyui-combobox' data-options=\"textField:\'text\', valueField:\'value\', data: tempData() \">";
+			var html="<input id='type8' class='easyui-combobox'>";
+			console.log($("#test"));
+			console.log(html);
+			$("#test0").html(html0);
+			$("#test").append(html);
+			document.getElementById("type8").setAttribute('data-options', '{textField: \"text\", valueField:\"value\", data:tempData()}');
+		});
+
+		function tempData(){
+			var vo = {};
+			var list = [];
+			for(var i=0;i<6;i++){
+				vo = {
+					text: 'text #' + i,
+					value: 'value #' + i,
+				}
+				list.push(vo);
+			}
+			return list;
+		}
+	</script>
+</head>
+<body>
+	<div id="test">
+		<!-- <input id="type8" class="easyui-combobox" data-options="textField:'text', valueField:'value', data: tempData() "> -->
+
+	</div>
+
+	<div id="test0"></div>
+</body>
+</html>

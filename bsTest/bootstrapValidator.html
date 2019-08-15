@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap validator</title>
+	<script src='js/jquery-1.12.4.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="bootstrapvalidator-master\dist\js\bootstrapValidator.min.js"></script>
+	<link rel="stylesheet" href="bootstrapvalidator-master\dist\css\bootstrapValidator.min.css">
+	<script src="js/btv.js"></script>
+</head>
+<body>
+<br><br>
+	<div style="width: 30%; padding: 0px; margin: 0 auto;" class="panel panel-default">
+		<div class="panel-heading">
+			bootstrap Validator 测试
+		</div>
+		<div class="panel-body">
+			<form id="form1" class="form-horizontal">
+				<div class="form-group">
+					<label for="username" class="col-xs-3">用 户 名</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" name='username'>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-3" for="email">电子邮箱</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" name="email">
+					</div>
+				</div>
+				<div class="form-group text-center">
+					<button type='button' id='submit' class="btn btn-warning">提交</button>
+					<button type="button" id='reset' class="btn btn-default">虫子</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
